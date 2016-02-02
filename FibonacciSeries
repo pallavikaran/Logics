@@ -1,0 +1,18 @@
+package edu.clemson.pallavi.commonCode;
+
+public class FibonacciSeries {
+	public static void main(String args[])  //A static method can be invoked without creating an instance(Object) of a class.
+	{    
+	 int n1=0,n2=1,n3,i,count=10;    
+	 System.out.print(n1+" "+n2);//printing 0 and 1    
+	    
+	 for(i=1;i<count;++i)    
+	 {    
+	  n3=n1+n2;    
+	  System.out.print(" "+n3);    //printing at i=0, n3=1
+	  n1=n2;   //at i=0, n1=1 
+	  n2=n3;   //at i=0, n2=1  
+	 }    
+	  
+	}
+}
