@@ -1,0 +1,21 @@
+package edu.clemson.pallavi.commonCode;
+
+public class FibonacciUsingRecursion {
+	static int n1=0,n2=1,n3=0; // Since these will hold the same value throughout the program, 
+	                          //memory sufficient: gets memory only once in class area at the time of class loading   
+	 static void printFibonacci(int count){//Static method here can change the value of static variables since we don't want to use objects to invoke this function
+	    if(count>0){    
+	         n3 = n1 + n2;    
+	         n1 = n2;    
+	         n2 = n3;    
+	         System.out.print(" "+n3);   
+	         printFibonacci(count-1);    
+	     }    
+	 }    
+	 
+	 public static void main(String args[]){//A static method can be invoked without creating an instance(Object) of a class.    
+	  int count=10;    
+	  System.out.print(n1+" "+n2);//printing 0 and 1    
+	  printFibonacci(count); //A static method can be invoked without creating an instance(Object) of a class.
+	 }  
+}
